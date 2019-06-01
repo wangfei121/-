@@ -1,0 +1,71 @@
+/*去除默认样式*/
+body,ul{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+/*设置#header_header的宽度不小于1000px*/
+#header_header{
+	width: 100%;
+	min-width: 1000px;
+	background-color: #333f51;
+}
+/*设置#header_header下放两个ul的容器定宽定高，水平居中。两个容器水平两端对齐*/
+#header_header>div{
+	width: 1000px;
+	height: 3rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	background: url(../img/bg1.jpg);
+}
+/*设置#header_header下两个ul定高，并借助弹性布局使li水平排布*/
+#header_header>div>ul{
+	height: 3rem;
+	display: flex;
+}
+#header_header>div>ul>li{
+	height: 3rem;
+	/*使边框不超出容器外*/
+	box-sizing: border-box;
+	line-height: 3rem;
+	/*使li间有间距*/
+	padding: 0 0.8rem;
+	position: relative;
+}
+#header_header>div>ul>li+li{
+	
+}
+/*设置下拉选项的默认样式*/
+#header_header>div>ul>li>ul{
+	/*让这一级容器脱离文档流*/
+	position: absolute;
+	/*让其与li对齐*/
+	left: 0;
+	width: 140px;
+	background-color: #343c45;
+	color: #bfcde2;
+	display: none;
+}
+#header_header>div>ul>li>ul>li:hover{
+	background-color: #101a25;
+	color: #fff;
+}
+/*设置鼠标悬浮时的类active包含的样式*/
+#header_header>div>ul>li.active{
+	border-bottom: 3px solid #d00060;
+	background-color: #101a25;
+}
+/*设置两个ul各自的字体颜色*/
+#header_header>div>#header_header_ul1>li{
+	color: #fff;
+}
+#header_header>div>#header_header_ul2>li{
+	color: #bfcde2;
+}
