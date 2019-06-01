@@ -39,9 +39,6 @@ a{
 	padding: 0 0.8rem;
 	position: relative;
 }
-#header_header>div>ul>li+li{
-	
-}
 /*设置下拉选项的默认样式*/
 #header_header>div>ul>li>ul{
 	/*让这一级容器脱离文档流*/
@@ -52,6 +49,7 @@ a{
 	background-color: #343c45;
 	color: #bfcde2;
 	display: none;
+	z-index:999;
 }
 #header_header>div>ul>li>ul>li:hover{
 	background-color: #101a25;
