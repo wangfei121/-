@@ -1,0 +1,15 @@
+//DOM加载完就触发的js代码
+$(function(){
+	//鼠标进入#header_header>div>ul>li时为其添加类名--active，并将下拉列表显示
+	$("#header_header>div>ul>li").mouseenter(function(){
+		$(this).addClass("active");
+		$(this).children("ul").css("display","block");
+		//如果鼠标进入后又离开了就移除掉他的类名--active，并将下拉列表隐藏
+		$(this).mouseleave(function(){
+			$(this).removeClass("active");
+			$(this).children("ul").css("display","none");
+		});
+	});
+});
+//必须依赖图片的js代码
+$(window).on('load',function(){})
